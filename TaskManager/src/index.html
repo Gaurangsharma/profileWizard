@@ -2,13 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>TaskManager</title>
+  <title>Testing</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <style>
+    #tooltip  {
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+  </style>
 </head>
 <body>
   <app-root></app-root>
+  <script src="https://unpkg.com/@popperjs/core@^2.0.0"></script>
+  <script>
+    jQuery(document).ready(function(){
+              // var ref=jQuery('#button-a');
+              // var popup=jQuery('#popup');
+              // popup.hide();
+              // ref.click(function(){
+              //     popup.show();
+              // })
+
+              // Popper.createPopper(button-a, popup, {
+              // placement: 'right',
+              // });
+
+              const button = document.querySelector('#button');
+              const tooltip = document.querySelector('#tooltip');
+
+              // Pass the button, the tooltip, and some options, and Popper will do the
+              // magic positioning for you:
+              Popper.createPopper(button, tooltip, {
+                placement: 'right',
+              });
+          });
+    </script>
 </body>
 </html>
