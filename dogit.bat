@@ -1,3 +1,3 @@
 git add .
-git commit -m "TaskCommit1"
+git commit -m "Componects creation for wizard"
 git push origin master
