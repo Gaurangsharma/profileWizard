@@ -1,0 +1,50 @@
+.mat-stepper-horizontal{
+    margin-top: 8px;
+  }
+  
+  .mat-form-field {
+    margin-top: 16px;
+  }
+
+  .companyName{
+    font-size: 150%;
+}
+
+.mat-toolbar{
+  height: 15vh;
+}
+
+div {
+    border-radius: 5px;
+    overflow: inherit;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+    font-size: 110%;
+    white-space: normal;
+    color: white;
+}
+
+button{
+    font-size: 110%;
+    min-width: min-content;
+}
+
+.example-icon {
+    padding: 0 14px;
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .mat-sidenav-content{
+      font-size: 200%;
+      text-align: center;
+  }
+
+  .mat-step button{
+    margin-right: 12px;
+  }

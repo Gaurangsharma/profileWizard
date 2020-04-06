@@ -1,0 +1,74 @@
+// input[type=text], input[type=number], select {
+//     width: 100%;
+//     padding: 12px 20px;
+//     margin: 8px 0;
+//     display: inline-block;
+//     border: 1px solid #ccc;
+//     border-radius: 4px;
+//     box-sizing: border-box;
+// }
+// input[type=submit] {
+//     width: 100%;
+//     background-color: #4CAF50;
+//     color: white;
+//     padding: 14px 20px;
+//     margin: 8px 0;
+//     border: none;
+//     border-radius: 4px;
+//     cursor: pointer;
+// }
+// input[type=submit]:hover {
+//     background-color: #45a049;
+// }
+// input[disabled][type=submit] {
+//     background:grey;
+// }
+// div {
+//    
+//     background-color: #f2f2f2;
+//     padding: 20px;
+// }
+
+.companyName{
+    font-size: 150%;
+}
+
+.mat-toolbar{
+  height: 7vh;
+}
+
+div {
+    border-radius: 5px;
+    overflow: inherit;
+    padding: 20px;
+}
+
+.mat-sidenav-container{
+  background-color: lightskyblue;
+  min-height: 93vh !important;
+}
+
+a{
+    text-decoration: none;
+    font-size: 110%;
+    white-space: normal;
+    color: white;
+}
+
+button{
+    font-size: 110%;
+    min-width: min-content;
+}
+
+.example-icon {
+    padding: 0 14px;
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .mat-sidenav-content{
+      font-size: 200%;
+      text-align: center;
+  }

@@ -1,3 +1,51 @@
-<p>
-  dashboard works!
-</p>
+<div  style="height: calc(100vh - 65px);" > 
+  <mat-toolbar color="primary">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <a mat-button class="companyName" routerLink="/">
+      <span>Form Builder Tool</span>
+    </a>
+    <span class="example-spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true">
+      <a mat-button routerLink="/features">Features</a>
+      <a mat-button routerLink="/support">Support</a>
+      <a mat-button routerLink="/login">Login</a>
+      <a mat-button routerLink="/signup">Signup</a>
+    </div>
+
+  </mat-toolbar>
+  <mat-sidenav-container fxFlexFill class="example-container">
+
+    <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over"  opened="false" fxHide.gt-sm="true">
+      <div fxLayout="column">
+        <a mat-button color="primary"routerLink="/features">Features</a>
+      <a mat-button color="primary"routerLink="/support">Support</a>
+      <a mat-button color="primary"routerLink="/login">Login</a>
+      <a mat-button color="primary"routerLink="/signup">Signup</a>
+    </div>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <h1>Easily Build Powerful Forms</h1>
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile >
+          <div>
+            <span>
+              Build a contact form, registration form, Login form, Shipping Form and so many more in just Seconds.
+            </span>
+            <br><br>
+            <mat-chip-list >
+                <mat-chip color="primary" selected style="left: 50%;"><a routerLink="/formDetail"  > Get Started</a></mat-chip>
+              </mat-chip-list>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+                <img src="/assets/img/forms-png-4.png" alt="No Image" width="80%" height="90%">
+        </mat-grid-tile>
+    </mat-grid-list>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

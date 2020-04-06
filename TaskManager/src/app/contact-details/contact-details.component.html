@@ -1,3 +1,99 @@
-<p>
-  contact-details works!
-</p>
+<div  style="height: calc(100vh - 65px);"> 
+      <mat-toolbar color="primary">
+        <div fxShow="true" fxHide.gt-sm="true">
+          <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+    
+        <a mat-button class="companyName" routerLink="/">
+          <span>Form Builder Tool</span>
+        </a>
+        <span class="example-spacer"></span>
+        <div fxShow="true" fxHide.lt-md="true">
+          <a mat-button routerLink="/features">Features</a>
+          <a mat-button routerLink="/support">Support</a>
+          <a mat-button routerLink="/login">Login</a>
+          <a mat-button routerLink="/signup">Signup</a>
+        </div>
+    
+      </mat-toolbar>
+      <mat-sidenav-container fxFlexFill class="example-container">
+    
+        <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over"  opened="false" fxHide.gt-sm="true">
+          <div fxLayout="column">
+            <a mat-button color="primary" routerLink="/features">Features</a>
+          <a mat-button color="primary"routerLink="/support">Support</a>
+          <a mat-button color="primary"routerLink="/login">Login</a>
+          <a mat-button color="primary"routerLink="/signup">Signup</a>
+        </div>
+        </mat-sidenav>
+        <mat-sidenav-content fxFlexFill>
+            <mat-horizontal-stepper #stepper>
+                <mat-step [stepControl]="firstFormGroup" class="mat-step">
+                  <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Fill out Form Detail</ng-template>
+                      Form Title:
+                      <input matInput type="text" name="title" required><br><br>
+                      Status:
+                      <input matInput type="text" name="status" required><br>
+                      <br>
+                    <div class="mat-step">
+                      <button mat-fab color="primary" matStepperNext>Next</button>
+                    </div>
+                  </form>
+                </mat-step>
+                <mat-step [stepControl]="secondFormGroup" >
+                  <form [formGroup]="secondFormGroup">
+                    <ng-template matStepLabel>Fill out group Detail</ng-template>
+                    Group Name:
+                    <input matInput type="text" name="groupName" required><br><br>
+                    Status:
+                    <input matInput type="text" name="status" required><br>
+                    <br>
+                    Order:
+                    <input matInput type="text" name="order" required><br>
+                    <br>
+                    <div class="mat-step">
+                      <button mat-fab color="primary" matStepperPrevious>Back</button>
+                      <button mat-fab color="primary" matStepperNext>Next</button>
+                    </div>
+                  </form>
+                </mat-step>
+                <mat-step >
+                  <ng-template matStepLabel>Fill out Attribute Detail</ng-template>
+                  <form [formGroup]="thirdFormGroup"> 
+                    Type:
+                    <input matInput type="text" name="groupName" required><br><br>
+                    Lable Name:
+                    <input matInput type="text" name="status" required><br>
+                    <br>
+                    placeholder:
+                    <input matInput type="text" name="order" required><br>
+                    <br>
+                    Suffix:
+                    <input matInput type="text" name="suffix"  ><br>
+                    <br>
+                    Prefix:
+                    <input matInput type="text" name="prefix"  ><br>
+                    <br>
+                    Error Show:
+                    <input matInput type="text" name="errorMsg" required><br>
+                    <br>
+                    Required:
+                    <input matInput type="text" name="required"  ><br>
+                    <br>
+                    Editable :
+                    <input matInput type="text" name="editable"  ><br>
+                    <br>
+                  <div class="mat-step">
+                    <button mat-fab color="primary" matStepperPrevious>Back</button>
+                    <button mat-fab color="primary" (click)="stepper.reset()">Reset</button>
+                    <button mat-fab color="primary" routerLink="/formView" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Submit</button>
+                  </div>
+                  </form>
+                </mat-step>
+              </mat-horizontal-stepper>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+    </div>
